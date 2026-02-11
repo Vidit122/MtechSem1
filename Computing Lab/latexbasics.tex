@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\author{Vidit Gala}
+\title{\textbf{Latex Basics Exp1}}
+
+\begin{document}
+\maketitle
+
+\section{\sffamily \large Different Headings(large)}
+This is a basic document to learn basics of latex
+
+\subsection{Subsection}
+this is a subsection
+
+\section*{\sffamily Different Headings(default)}
+This is a basic document to learn basics of latex
+\section*{\sffamily \small Different Headings(small)}
+This is a basic document to learn basics of latex
+
+\textbf{\section*{Mathematical Equations}
+	These are some simple maths equations:
+	\newline
+	1. Pythagorus theorem: $a^2 + b^2 = c^2 $
+	\newline
+	2. Area of a triangle $= (b \times h) \div 2$
+	\newline
+	3. Basic Differential Equation: $\frac{d^2f(x)}{dx^2} = \frac{d^2(x^2 +53x + 1)}{dx^2} $
+	\newline
+	4. Integration Equation: $\int f(x) = \int x^4 +3x^3 + 5x^2 + 23x + 3$
+	\newline
+	5. Sine-cos: $ \sin^2 \theta + \cos^2 \theta = 1$
+	\newline
+	6. Integration over a range:  $\int_{-\infty}^{+\infty} e^{x^2} \, dx $
+	\newline
+	7. Matrix: $ \begin{pmatrix}
+		12 & 5 & 6 \\
+		10 & 4 & 3 \\
+	\end{pmatrix} $
+	\newline
+	8. Area of a Circle = $\pi \times r^2$
+	\newline
+	9. Factorial: $n! = n \times (n-1) \times (n-2)\times .....2 \times 1$
+	\newline
+	10. Union: $A \cup B = A + B - A \cap B$
+	\newline
+	11. Summation: $\sum_{i=0}^{n} = 0+ x1+x2+....xn$}
+	
+
+
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{images.jpg}
+	\caption{An Image of space}
+	\label{Space}
+\end{figure}
+
+
+
+\begin{table}
+\caption{Marks Table}
+\begin{tabular}{c|c|c}
+	%\caption{Marks table}
+	\hline
+	Sr.No & Course & Grade \\
+	\hline
+	1 & Algo & 8.0 \\
+	\midrule
+	2 & Crypto & 9.0 \\
+	\hline
+	3 & PIS & 9.5 \\
+	\hline
+	4 & Maths & 9.0 \\
+	\hline
+	5 & Seminar & 8.5 \\
+	\hline
+\end{tabular}
+\end{table}
+
+\vspace*{0.5cm}
+
+\begin{table}
+\caption{Detailed Marks table}
+\begin{tabular}{c|c|c}
+	\hline
+	Sr.No & Course & Grade \\
+	\hline
+	1 & Algo & 8.0 \\
+	\hline
+	2 & Crypto & 9.0 \\
+	\hline
+	3 & Electives & 
+	\begin{tabular}{c|c}
+		9.5 & 7.0 \\
+		\hline
+		8.5 & 8 \\
+	\end{tabular} \\ 
+	\hline
+	4 & Maths & 9.0 \\
+	\hline
+	5 & Seminar & 8.5 \\
+	\hline
+\end{tabular}
+\end{table}
+
+\end{document}

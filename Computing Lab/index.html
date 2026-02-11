@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gmail Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="logo">📧 MyMail</div>
+    <input id="searchInput" type="text" placeholder="🔍 Search mail...">
+    <button id="searchBtn" class="search-btn">Search</button>
+    <button id="toggleDark" class="dark-btn">🌙</button>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="folder-nav">
+        <button class="folder-btn active" data-folder="ALL">📥 Inbox</button>
+        <button class="folder-btn" data-folder="SENT">📤 Sent</button>
+        <button class="folder-btn" data-folder="SPAM">🚫 Spam</button>
+        <button class="folder-btn" data-folder="DRAFT">📝 Drafts</button>
+        <button id="composeBtn" class="compose-btn">✉️ Compose</button>
+
+      </nav>
+    </aside>
+
+    <!-- Main Email List -->
+    <main class="main">
+      <div class="email-list" id="emailList"></div>
+      <div class="pagination">
+        <button id="prevPage">⬅ Prev</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Next ➡</button>
+      </div>
+    </main>
+
+    <div id="composeModal" class="compose-modal hidden">
+      <div class="compose-box">
+        <div class="compose-header">
+          <span>New Message</span>
+          <button id="closeCompose" class="close-btn">✖</button>
+        </div>
+        <input type="text" id="composeTo" placeholder="To">
+        <input type="text" id="composeSubject" placeholder="Subject">
+        <textarea id="composeBody" placeholder="Write your message..."></textarea>
+        <div class="compose-footer">
+          <button id="sendMail" class="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Email Viewer -->
+    <section class="viewer" id="emailViewer">
+      <h3 id="emailSubject">Select an email</h3>
+      <p class="meta" id="emailMeta"></p>
+      <div class="body" id="emailBody"></div>
+    </section>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
